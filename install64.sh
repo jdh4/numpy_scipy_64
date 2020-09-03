@@ -24,6 +24,7 @@ wget https://github.com/numpy/numpy/archive/v1.19.1.tar.gz
 tar zxf v1.19.1.tar.gz
 cd numpy-1.19.1
 wget https://raw.githubusercontent.com/jdh4/numpy_scipy_64/master/numpy/site.cfg
+sed -i 's/jdh4/fangx/' site.cfg
 $HOME/software/Python-3.8.5/exec/bin/pip3 install --user cython
 $HOME/software/Python-3.8.5/exec/bin/python3 setup.py install --prefix=$HOME/.local
 $HOME/software/Python-3.8.5/exec/bin/python3 -c "import numpy; numpy.show_config()"
@@ -34,5 +35,6 @@ wget https://github.com/scipy/scipy/releases/download/v1.5.2/scipy-1.5.2.tar.gz
 tar zxf scipy-1.5.2.tar.gz
 cd scipy-1.5.2
 wget https://raw.githubusercontent.com/jdh4/numpy_scipy_64/master/scipy/site.cfg
+sed -i 's/jdh4/fangx/' site.cfg
 $HOME/software/Python-3.8.5/exec/bin/python3 setup.py install --prefix=$HOME/.local
 $HOME/software/Python-3.8.5/exec/bin/python3 -c "import scipy; scipy.show_config()"
