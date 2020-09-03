@@ -4,7 +4,7 @@ cd Python-3.8.5
 mkdir exec
 module load rh/devtoolset/8
 ./configure --help
-./configure --enable-optimizations --prefix=/home/jdh4/software/Python-3.8.5/exec
+./configure --enable-optimizations --prefix=$HOME/software/Python-3.8.5/exec
 make -j 10
 make test  # some tests fail
 make install
