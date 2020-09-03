@@ -1,3 +1,5 @@
+module purge
+
 wget https://www.python.org/ftp/python/3.8.5/Python-3.8.5.tgz
 tar zxf Python-3.8.5.tgz
 cd Python-3.8.5
@@ -17,7 +19,7 @@ export NPY_LAPACK_ILP64_ORDER=openblas_ilp64
 
 git clone https://github.com/numpy/numpy.git
 cp site.cfg.example site.cfg
-rh8
+module load rh/devtoolset/8
 wget https://raw.githubusercontent.com/jdh4/numpy_scipy_64/master/numpy/site.cfg
 ./pip3 install --user cython
 $HOME/software/Python-3.8.5/exec/bin/python3 setup.py install --prefix=$HOME/.local
