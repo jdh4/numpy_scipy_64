@@ -27,6 +27,7 @@ wget https://raw.githubusercontent.com/jdh4/numpy_scipy_64/master/numpy/site.cfg
 sed -i 's/jdh4/fangx/' site.cfg
 $HOME/software/Python-3.8.5/exec/bin/pip3 install --user cython
 $HOME/software/Python-3.8.5/exec/bin/python3 setup.py install --prefix=$HOME/.local
+cd ~
 $HOME/software/Python-3.8.5/exec/bin/python3 -c "import numpy; numpy.show_config()"
 
 ## build scipy against 64-bit openblas ##
@@ -37,4 +38,5 @@ cd scipy-1.5.2
 wget https://raw.githubusercontent.com/jdh4/numpy_scipy_64/master/scipy/site.cfg
 sed -i 's/jdh4/fangx/' site.cfg
 $HOME/software/Python-3.8.5/exec/bin/python3 setup.py install --prefix=$HOME/.local
+cd ~
 $HOME/software/Python-3.8.5/exec/bin/python3 -c "import scipy; scipy.show_config()"
